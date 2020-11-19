@@ -16,7 +16,6 @@
 - performence: (solo, band...)
 - releaseYear
 - price
-- total
 - created
 - updated
 
