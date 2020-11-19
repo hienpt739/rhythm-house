@@ -38,7 +38,6 @@
 - email
 - phone
 - address
-- payment
 - ismember (default: 0 -> not a member)
 - reciveMessage(email/phone: 0 or 1)
 
@@ -48,5 +47,6 @@
 - id_Albums
 - id_Customers
 - price
+- payment
 - created_at
 - order_at
