@@ -39,7 +39,7 @@
 - address
 - isMember (default: 0 -> not a member)
 - reciveMessage(email/phone: 0 or 1)
-
+### Users
 ### Orders
 
 - id
