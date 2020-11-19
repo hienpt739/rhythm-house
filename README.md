@@ -14,7 +14,7 @@
 - name
 - artist
 - performence: (solo, band...)
-- release year
+- releaseYear
 - price
 - total
 - created
@@ -38,7 +38,7 @@
 - email
 - phone
 - address
-- ismember (default: 0 -> not a member)
+- isMember (default: 0 -> not a member)
 - reciveMessage(email/phone: 0 or 1)
 
 ### Orders
@@ -48,5 +48,5 @@
 - id_Customers
 - price
 - payment
-- created_at
-- order_at
+- created
+- orderTime
