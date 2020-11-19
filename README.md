@@ -36,7 +36,9 @@
 - id
 - name
 - email
+- phone
 - address
+- ismember (default: 0 -> not a member)
 
 ### Orders
 
