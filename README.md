@@ -38,9 +38,9 @@
 - email
 - phone
 - address
-- isMember (default: 0 -> not a member)
-- reciveMessage(email/phone: 0 or 1)
-<<<<<<< HEAD
+
+
+
 
 ### Users
 
@@ -52,15 +52,16 @@
 - password
 
 
+
 ### Orders
 
 - id
 - id_Customers
-- created
-
-
-id1 -- kh3
-id2 -- kh3 
+- created_at
+- total money
+- status: 0, 1, -1
+- expected_time:  
+- delivered_time: 
 
 
 ### OrderDetails
@@ -69,8 +70,6 @@ id2 -- kh3
 - id_Puslish_Type
 - price
 - num
+- total money: 
 
-
-order1 -- album2 -- CD -- 50000 -- 2 
-order1 -- album2 -- DVD -- 50000 -- 3
 
