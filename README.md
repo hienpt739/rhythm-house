@@ -30,3 +30,22 @@
 - id_Albums: FK_Albums
 - id_Puslish_Type: FK_Puslish_Type
 - num (available):
+  <<<<<<< HEAD
+  =======
+
+### Customers
+
+- id
+- name
+- email
+- address
+
+### Orders
+
+- id
+- id_Albums
+- id_Customers
+- price
+- created_at
+- order_at
+  > > > > > > > f437d9090530a71abdce0244e51b16ca70846db1
