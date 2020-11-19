@@ -9,7 +9,7 @@
 - Jazz..
 - 60's & 70's
 
-### albums
+### Albums
 
 - id
 - name
@@ -25,18 +25,12 @@
 ### Puslish_Type
 
 - id
-- name
-  1 - CD
-  2 - DVD
-  3 - Tape
-  4 - Magazine
+- name (CD, DVD, Tape, Magazine...)
 
 ### Albums_Available
 
-- id_albums
-- id_Puslish_Type
-- num
-  1 - CD - 3
-  1 - DVD - 2
-  1 - Tape - 2
+- id_Albums: FK_Albums
+- id_Puslish_Type: FK_Puslish_Type
+- num (available): 
+ 
 
