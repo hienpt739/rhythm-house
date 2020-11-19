@@ -29,9 +29,7 @@
 
 - id_Albums: FK_Albums
 - id_Puslish_Type: FK_Puslish_Type
-- num (available):
-  <<<<<<< HEAD
-  =======
+- num (available)
 
 ### Customers
 
