@@ -46,4 +46,3 @@
 - price
 - created_at
 - order_at
-  > > > > > > > f437d9090530a71abdce0244e51b16ca70846db1
