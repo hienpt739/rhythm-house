@@ -33,6 +33,7 @@
 ### Customers
 
 - id
+- id_user
 - name
 - email
 - phone
@@ -40,12 +41,34 @@
 - isMember (default: 0 -> not a member)
 - reciveMessage(email/phone: 0 or 1)
 
+### Users
+
+- id
+- firstName
+- lastName
+- email
+- phone
+- password
+
 ### Orders
 
 - id
-- id_Albums
 - id_Customers
-- price
-- payment
 - created
-- orderTime
+
+
+id1 -- kh3
+id2 -- kh3 
+
+
+### OrderDetails
+- id_Orders
+- id_Albums
+- id_Puslish_Type
+- price
+- num
+
+
+order1 -- album2 -- CD -- 50000 -- 2 
+order1 -- album2 -- DVD -- 50000 -- 3
+
