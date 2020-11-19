@@ -1,4 +1,4 @@
-# DATABASE : rhythmMusicManagement
+# DATABASE : rhythmHouseManagement
 
 ## TABLE
 
