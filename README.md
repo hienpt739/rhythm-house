@@ -10,8 +10,8 @@
 ### Albums
 
 - id
+- id_category: FK_Categories
 - name
-- type: FK_Categories
 - artist
 - performence: (solo, band...)
 - release year
