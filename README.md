@@ -4,10 +4,8 @@
 
 ### Categories
 
-- R'n Roll
-- Classic
-- Jazz..
-- 60's & 70's
+- id
+- name (R'n Roll, Classic, Jazz, 60's & 70's)
 
 ### Albums
 
@@ -31,6 +29,4 @@
 
 - id_Albums: FK_Albums
 - id_Puslish_Type: FK_Puslish_Type
-- num (available): 
- 
-
+- num (available):
