@@ -38,7 +38,9 @@
 - email
 - phone
 - address
+- payment
 - ismember (default: 0 -> not a member)
+- reciveMessage(email/phone: 0 or 1)
 
 ### Orders
 
