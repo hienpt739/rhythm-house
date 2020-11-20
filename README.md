@@ -7,13 +7,13 @@
 - Albums can be of movies or different bands or solo performer’s collections.
 
 - Categories can be CD, DVD, Tape as well as movies, bands, Solo performers. E.g there can be CD of a movie as well as DVD and tape, all should be displayed separately.
- 
 
 - Perform the search based on a particular
-1. movie
-2. band
-3. solo performer
-4. release year
+
+  1. movie
+  2. band
+  3. solo performer
+  4. release year
 
 - Display the statistics of albums sold monthly.
 
@@ -76,9 +76,6 @@
 - phone
 - address
 
-
-
-
 ### Users
 
 - id
@@ -88,8 +85,6 @@
 - phone
 - password
 
-
-
 ### Orders
 
 - id
@@ -97,16 +92,14 @@
 - created_at
 - total money
 - status: 0, 1, -1
-- expected_time:  
-- delivered_time: 
-
+- expected_time:
+- delivered_time:
 
 ### OrderDetails
+
 - id_Orders
 - id_Albums
 - id_Puslish_Type
 - price
 - num
-- total money: 
-
-
+- total money:
