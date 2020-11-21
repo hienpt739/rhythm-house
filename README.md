@@ -25,7 +25,7 @@
 
 - Display the details (performer, time, duration, entry fee etc) of live shows. => page: live shows
 
-- Give information about membership. => pages: sign up, sign in, view info
+- Give information about membership. => pages: sign up, sign in, view + edit info
 
 - Display the available books and magazines.
 
