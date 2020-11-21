@@ -70,7 +70,6 @@
 ### Customers
 
 - id
-- id_user
 - name
 - email
 - phone
@@ -79,6 +78,7 @@
 ### Users
 
 - id
+- id_Customers
 - firstName
 - lastName
 - email
