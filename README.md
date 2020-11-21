@@ -17,8 +17,7 @@
   3. solo performer
   4. release year
 
-  => navbar: searching area
-  => albums: searching area
+  => navbar: searching area; albums: searching area
 
 - Display the statistics of albums sold monthly. => page: home
 
@@ -56,6 +55,7 @@
 - name
 - artist
 - performence: (solo, band...)
+- description
 - releaseYear
 - price
 - created
@@ -98,6 +98,7 @@
 - status: 0, 1, -1
 - expected_time:
 - delivered_time:
+- note
 
 ### OrderDetails
 
@@ -110,4 +111,14 @@
 
 # PAGES
 
--
+### Home
+
+- navbar: icon, nav link, search, user(sign up, in out)
+- body: some usful informations + link to another page...
+- footer: copy right, register mark, (link), phone, address, email...
+
+### Albums
+
+- navbar
+- body:
+  1. display list albums: img, name, artist, btn(view details, buy, add to card,...) => page: <b>View Detail</b>
