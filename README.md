@@ -1,12 +1,14 @@
 # REQUIREMENT SPECIFICATIONS
 
-- A menu that will categorize all the functions of the site
+- A menu that will categorize all the functions of the site. => navbar
 
-- Display the list of available albums category wise.
+- Display the list of available albums category wise. => page: albums
 
 - Albums can be of movies or different bands or solo performer’s collections.
 
 - Categories can be CD, DVD, Tape as well as movies, bands, Solo performers. E.g there can be CD of a movie as well as DVD and tape, all should be displayed separately.
+
+  => albums : dropdown categories
 
 - Perform the search based on a particular
 
@@ -15,23 +17,26 @@
   3. solo performer
   4. release year
 
-- Display the statistics of albums sold monthly.
+  => navbar: searching area
+  => albums: searching area
 
-- Display the various offers/contests by the shop
+- Display the statistics of albums sold monthly. => page: home
 
-- Display the details (performer, time, duration, entry fee etc) of live shows
+- Display the various offers/contests by the shop => page: home or page: special offers
 
-- Give information about membership.
+- Display the details (performer, time, duration, entry fee etc) of live shows. => page: live shows
+
+- Give information about membership. => pages: sign up, sign in, view info
 
 - Display the available books and magazines.
 
-- Display the price list of the various items available in the shop i.e. (CDs, DVDs, Tapes, Books, Magazines)
+- Display the price list of the various items available in the shop i.e. (CDs, DVDs, Tapes, Books, Magazines). => albums: checkbox
 
-- Display the schedule and details of upcoming live shows.
+- Display the schedule and details of upcoming live shows. => page: live shows
 
-- Site should be able to provide brief introduction/history about the shop under AboutUs page
+- Site should be able to provide brief introduction/history about the shop under AboutUs page. => page: About Us
 
-- The location of the shop under Contact-Us page.
+- The location of the shop under Contact-Us page. page: Contact Us
 
 - Besides the above requirements, the site should have look and feel as per the industry standards
 
@@ -79,8 +84,7 @@
 
 - id
 - id_Customers
-- firstName
-- lastName
+- name
 - email
 - phone
 - password
@@ -103,3 +107,7 @@
 - price
 - num
 - total money:
+
+# PAGES
+
+-
