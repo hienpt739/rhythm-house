@@ -8,7 +8,7 @@
 
 - Categories can be CD, DVD, Tape as well as movies, bands, Solo performers. E.g there can be CD of a movie as well as DVD and tape, all should be displayed separately.
 
-  => albums : dropdown categories
+  => albums : filter
 
 - Perform the search based on a particular
 
@@ -17,25 +17,25 @@
   3. solo performer
   4. release year
 
-  => navbar: searching area; albums: searching area
+  => albums: searching area
 
-- Display the statistics of albums sold monthly. => page: home
+- Display the statistics of albums sold monthly. => page: Home || Albums
 
-- Display the various offers/contests by the shop => page: home or page: special offers
+- Display the various offers/contests by the shop => page: Home || Special Offers
+ 
+- Display the details (performer, time, duration, entry fee etc) of live shows. => page: Home || Live Shows
 
-- Display the details (performer, time, duration, entry fee etc) of live shows. => page: live shows
+- Give information about membership. => pages: Sign up, Sign in, View + edit info
 
-- Give information about membership. => pages: sign up, sign in, view + edit info
+- Display the available books and magazines. => page: Books & Magazines
 
-- Display the available books and magazines.
+- Display the price list of the various items available in the shop i.e. (CDs, DVDs, Tapes, Books, Magazines). => page: Albums -> items -> price
 
-- Display the price list of the various items available in the shop i.e. (CDs, DVDs, Tapes, Books, Magazines). => albums: checkbox
-
-- Display the schedule and details of upcoming live shows. => page: live shows
+- Display the schedule and details of upcoming live shows. => page: Home || Live Shows
 
 - Site should be able to provide brief introduction/history about the shop under AboutUs page. => page: About Us
 
-- The location of the shop under Contact-Us page. page: Contact Us
+- The location of the shop under Contact-Us page. => page: Contact Us
 
 - Besides the above requirements, the site should have look and feel as per the industry standards
 
@@ -110,10 +110,10 @@
 - total money:
 
 
-#DATABASE 2 
+# DATABASE 2 
 
 
-###Categories:
+### Categories:
 	- id
 	- name (album, book, magazine...)
 ### Prouducts:
@@ -137,24 +137,6 @@
 	- id_Products
 	- id_Albums_Puslish_Type
 	- number
-
-
-### Categories: 
-	- c1 -- book
-	- c2 -- album
-
-### Prouducts:
-	- p1 -- c1 -- Jazz Albums -- John Doe -- solo 
-	- p2 -- c1 -- Classic Albums -- John Doe New -- movie
-
-### Albums_Puslish_Type:
-	- a1 -- CD
-	- a2 -- DVD
-	- a3 -- Tape
-
-### Albums_Available: 
-	- p1 -- a1 -- 3
-	- p1 -- a2 -- 2
 
 ### Customers:
 	- id
@@ -184,8 +166,6 @@
 	- price
 	- num
 	- total money ?
-
-
 
 
 # PAGES
