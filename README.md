@@ -115,7 +115,7 @@
 
 ### Categories:
 	- id
-	- name (album, book, magazine...)
+	- name (album, book, magazine, movie...)
 ### Prouducts:
 	- id
 	- id_Categories
@@ -131,7 +131,7 @@
 
 ### Albums_Puslish_Type:
 	- id
-	- name (CD, DVD, Tape, Movie...)
+	- name (CD, DVD, Tape...)
 
 ### Albums_Available: 
 	- id_Products
