@@ -237,7 +237,7 @@
     - updated_at
     - note
 
-### OrderDetails:
+### Order_Details:
 
     - id_Orders
     - id_Products
@@ -247,9 +247,8 @@
 
 # ADMIN
 
-## requirements
+## Requirements
 
 - sign-in
 - add / edit / delete categories
 - add / edit / delete products
--
