@@ -38,7 +38,7 @@
 - The location of the shop under Contact-Us page. => page: Contact Us
 
 - Besides the above requirements, the site should have look and feel as per the industry standards
-
+<!-- 
 # DATABASE : rhythmHouseManagement
 
 ## TABLE
@@ -166,6 +166,7 @@
 	- price
 	- num
 	- total money ?
+-->
 
 # DATABASE 3: 
 ### Categories:
