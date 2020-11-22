@@ -167,6 +167,59 @@
 	- num
 	- total money ?
 
+# DATABASE 3: 
+### Categories:
+	- id
+	- name (CDs, DVDs, Tapes, Books, Magazines...)
+
+### Prouducts:
+	- id
+	- name
+	- number
+	- price
+	- thumnail_link
+	- description
+	- created_at
+	- updated_at
+	- artist
+	- performance
+	- release_year
+
+### Products_Classification
+	- id_sp 
+	- id_category
+	- number
+
+### Customers:
+	- id
+	- name
+	- phone
+	- address
+
+### Users:
+	- id
+	- id_Customers
+	- name
+	- email
+	- password
+
+=> xem xét gộp Users và0 Customers : thêm trường is_Member
+
+
+### Orders:
+	- id
+	- id_Customers
+	- created_at
+	- total money ?
+	- status: 0, 1, -1
+	- note
+
+### OrderDetails:
+	- id_Orders
+	- id_Products
+	- price
+	- nummber
+	- total money ?
 
 # PAGES
 
