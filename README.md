@@ -168,7 +168,7 @@
 	- total money ?
 -->
 
-# DATABASE 3: 
+# DATABASE: rhythmHouseManagement
 ### Categories:
 	- id
 	- name (CDs, DVDs, Tapes, Books, Magazines...)
