@@ -109,6 +109,85 @@
 - num
 - total money:
 
+
+#DATABASE 2 
+
+
+###Categories:
+	- id
+	- name (album, book, magazine...)
+### Prouducts:
+	- id
+	- id_Categories
+	- name
+	- price
+	- thumnail_link
+	- description
+	- created_at
+	- updated_at
+	- artist
+	- performance
+	- release_year
+
+### Albums_Puslish_Type:
+	- id
+	- name (CD, DVD, Tape, Movie...)
+
+### Albums_Available: 
+	- id_Products
+	- id_Albums_Puslish_Type
+	- number
+
+
+### Categories: 
+	- c1 -- book
+	- c2 -- album
+
+### Prouducts:
+	- p1 -- c1 -- Jazz Albums -- John Doe -- solo 
+	- p2 -- c1 -- Classic Albums -- John Doe New -- movie
+
+### Albums_Puslish_Type:
+	- a1 -- CD
+	- a2 -- DVD
+	- a3 -- Tape
+
+### Albums_Available: 
+	- p1 -- a1 -- 3
+	- p1 -- a2 -- 2
+
+### Customers:
+	- id
+	- name
+	- phone
+	- address
+
+### Users: 
+	- id
+	- id_Customers
+	- name
+	- email
+	- password
+	
+### Orders:
+	- id
+	- id_Customers
+	- created_at
+	- total money ?
+	- status: 0, 1, -1
+	- note
+
+### OrderDetails:
+	- id_Orders
+	- id_Albums
+	- id_Puslish_Type
+	- price
+	- num
+	- total money ?
+
+
+
+
 # PAGES
 
 ### Home
