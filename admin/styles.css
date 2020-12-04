@@ -1,0 +1,29 @@
+body {
+  background-color: #f1f2fa;
+}
+
+@media (min-width: 1920px) {
+  body {
+    max-width: 1920px;
+    margin: auto;
+  }
+}
+
+/* sign in */
+#container {
+  height: 100vh;
+}
+#form-login {
+  background-color: white;
+  border-radius: 15px;
+}
+#form-login > button[type="submit"] {
+  background-color: #282f6e !important;
+  color: white;
+}
+
+/* home page */
+
+#content-no-session {
+  height: 100vh;
+}

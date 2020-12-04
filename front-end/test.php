@@ -1,5 +1,5 @@
 <?php 
-  session_start();
+
   require_once('../database/config.php');
   require_once('../database/functions.php');
 ?>
@@ -20,7 +20,7 @@
   </head>
   <body>
     <!-- if session isn't set, required login-->
-    <?php if (isset($_SESSION['isLogin']) && $_SESSION['isLogin'] == true): ?>
+    
       <!-- nav -->
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="home.php">RhythmHouse</a>
@@ -33,7 +33,7 @@
             <li class="nav-item">
               <a class="nav-link" href="home.php">Home</a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
               <a class="nav-link" href="#">Categories</a>
             </li>
             <li class="nav-item">
@@ -47,6 +47,9 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="orders-detail.php">Orders_Detail</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link position-relative" href="cart.php">Cart <span id="numProdOfCart" class="bg-danger text-center rounded" style="position: absolute; display: inline-block; width: 20px; height:20px; top: 0; right: -5px;"></span></a>
             </li>
           </ul>
           <a href="logout.php">log out</a>
@@ -64,27 +67,27 @@
               <tr>
                 <th></th>
                 <th scope="col">Id</th>
-                <th scope="col">Category Name</th>
+                <th scope="col">Name</th>
                 <th scope="col">Action</th>
               </tr>
             </thead>
             <tbody>
               <?php 
-                $sql = "SELECT * FROM categories WHERE isDeleted=0;";
+                $sql = "SELECT * FROM products WHERE isDeleted=0;";
                 $result = dbSelect($sql);
                 $numericOrder = 0;
                 foreach($result as $row) {
                   $numericOrder++;
                   $id = $row['id'];
-                  $categoryName = $row['name'];
+                  $name = $row['name'];
                   echo "
                     <tr>
                       <td>$numericOrder</td>
                       <td>$id</td>
-                      <td>$categoryName</td>
+                      <td>$name</td>
                       <td>
-                        <a href='categories-add.php?id=$id' class='text-warning'><i class='fas fa-edit'></i></a>
-                        <a class='text-danger' onclick='removeCategory($id)'><i class='fas fa-trash'></i></a>
+                        <button class='btn btn-sm btn-success' onclick='addToCart($id)'>add to cart</button>
+                        
                       </td>
                     </tr>
                   ";
@@ -94,34 +97,32 @@
           </table>
         </div>
       </div>
-    <?php else: ?>
-      <div id="content-no-session" class="d-flex justify-content-center align-items-center">
-        <div>
-          <h1 class="text-center display-4">Please login to see this page.</h1>
-          <h3 class="text-center"><a href="login.php">Login</a><h3>
-        </div>
-      </div>
-
-    <?php endif; ?>    
+      
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script>
-      function removeCategory(idCategory) {
-        const cfDelete = confirm('delete this category?');
-        if(cfDelete) {
-          $.post(
-            'categories-delete.php',
-            {id: idCategory}, 
-            function() {
-              location.reload();
-            }
-          );
-          
-        } 
-      }
+    function setCookie(cname, cvalue, exdays) {
+      var d = new Date();
+      d.setTime(d.getTime() + (exdays*24*60*60*1000));
+      var expires = "expires="+ d.toUTCString();
+      document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+    $count = 0;
+    $('#numProdOfCart').text($count);
+    $('#numProdOfCart').hide();
+    
+    function addToCart(id) {
+      $count++;
+      $('#numProdOfCart').text($count);
+      $('#numProdOfCart').show();
+      setCookie(`product${id}`, id, 1);
+      console.log(document.cookie);
+    }
+
+    
     </script>
   </body>
 </html>

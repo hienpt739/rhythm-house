@@ -38,217 +38,58 @@
 - The location of the shop under Contact-Us page. => page: Contact Us
 
 - Besides the above requirements, the site should have look and feel as per the industry standards
-<!--
 
-# DATABASE : rhythmHouseManagement
+# DATABASE: rhythmHouseManagement
 
 ## TABLE
 
 ### Categories
 
-- id
-- name (R'n Roll, Classic, Jazz, 60's & 70's)
+    - id
+    - name (CDs, DVDs, Tapes, Magazines, Books)
 
-### Albums
+### Products
 
-- id
-- id_category: FK_Categories
-- name
-- artist
-- performence: (solo, band...)
-- description
-- releaseYear
-- price
-- created
-- updated
-
-### Puslish_Type
-
-- id
-- name (CD, DVD, Tape, Magazine...)
-
-### Albums_Available
-
-- id_Albums: FK_Albums
-- id_Puslish_Type: FK_Puslish_Type
-- num (available)
-
-### Customers
-
-- id
-- name
-- email
-- phone
-- address
+    - id
+    - id_category: FK_Categories
+    - name
+    - number
+    - price
+    - author
+    - performence: (solo, band...)
+    - description
+    - release_year
+    - created
+    - updated
 
 ### Users
 
-- id
-- id_Customers
-- name
-- email
-- phone
-- password
+    - id
+    - name
+    - email
+    - phone
+    - password
+    - address
+    - role (0: admin, 1: user)
 
 ### Orders
 
-- id
-- id_Customers
-- created_at
-- total money
-- status: 0, 1, -1
-- expected_time:
-- delivered_time:
-- note
+    - id
+    - id_Users
+    - created_at
+    - total money
+    - payment: COD, Banking
+    - name
+    - phone
+    - address
+    - note
 
 ### OrderDetails
 
-- id_Orders
-- id_Albums
-- id_Puslish_Type
-- price
-- num
-- total money:
-
-# DATABASE 2
-
-### Categories:
-
-    - id
-    - name (album, book, magazine, movie...)
-
-### Prouducts:
-
-    - id
-    - id_Categories
-    - name
-    - price
-    - thumnail_link
-    - description
-    - created_at
-    - updated_at
-    - artist
-    - performance
-    - release_year
-
-### Albums_Puslish_Type:
-
-    - id
-    - name (CD, DVD, Tape...)
-
-### Albums_Available:
-
-    - id_Products
-    - id_Albums_Puslish_Type
-    - number
-
-### Customers:
-
-    - id
-    - name
-    - phone
-    - address
-
-### Users:
-
-    - id
-    - id_Customers
-    - name
-    - email
-    - password
-
-### Orders:
-
-    - id
-    - id_Customers
-    - created_at
-    - total money ?
-    - status: 0, 1, -1
-    - note
-
-### OrderDetails:
-
-    - id_Orders
-    - id_Albums
-    - id_Puslish_Type
-    - price
-    - num
-    - total money ?
-
--->
-
-# DATABASE: rhythmHouseManagement
-
-### Categories:
-
-    - id
-    - name (CDs, DVDs, Tapes, Books, Magazines...)
-
-### Prouducts:
-
-    - id
-    - name
-    - thumnail_link
-    - artist
-    - performance
-    - music_type
-    - release_year
-    - created_at
-    - updated_at
-
-### Products_Detail
-
-    - id_Prouducts
-    - id_Categories
-    - number
-    - price
-    - description
-    - created_at
-    - updated_at
-
-### Customers:
-
-    - id
-    - name
-    - phone
-    - address
-    - created_at
-    - updated_at
-
-### Users:
-
-    - id
-    - id_Customers
-    - name
-    - email
-    - password
-    - created_at
-    - updated_at
-
-=> xem xét gộp Users và0 Customers : thêm trường is_Member
-
-### Orders:
-
-    - id
-    - id_Customers
-    - total money ?
-    - status: 0, 1, -1
-    - created_at
-    - updated_at
-    - note
-
-### Order_Details:
-
     - id_Orders
     - id_Products
     - price
-    - nummber
-    - total money ?
+    - number
+    - total money
 
 # ADMIN
-
-## Requirements
-
-- sign-in
-- add / edit / delete categories
-- add / edit / delete products

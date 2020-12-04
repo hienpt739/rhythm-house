@@ -2,4 +2,4 @@
 DEFINE('SERVERNAME', 'localhost');
 DEFINE('USERNAME', 'root');
 DEFINE('PASSWORD', '');
-DEFINE('DATABASE', 'rhythmHosueManagement');
+DEFINE('DATABASE', 'rhythmHouseMannagement');
