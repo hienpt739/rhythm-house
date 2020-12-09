@@ -2,6 +2,16 @@
 
   require_once('../database/config.php');
   require_once('../database/functions.php');
+
+  if(!empty($_COOKIE)) {
+    $productsId = array_slice($_COOKIE, 1);
+    $count = count($productsId);
+    if($count <= 0) {
+      $numCart = '';
+    } else {
+      $numCart = $count;
+    }
+  } 
 ?>
 <!doctype html>
 <html lang="en">
@@ -49,7 +59,7 @@
               <a class="nav-link" href="orders-detail.php">Orders_Detail</a>
             </li>
             <li class="nav-item ">
-              <a class="nav-link position-relative" href="cart.php">Cart <span id="numProdOfCart" class="bg-danger text-center rounded" style="position: absolute; display: inline-block; width: 20px; height:20px; top: 0; right: -5px;"></span></a>
+              <a class="nav-link position-relative" href="cart.php">Cart <span id="numProdOfCart" class="bg-danger text-center rounded" style="position: absolute; display: inline-block; width: 20px; height:20px; top: 0; right: -5px;"><?=$numCart?></span></a>
             </li>
           </ul>
           <a href="logout.php">log out</a>
@@ -86,8 +96,8 @@
                       <td>$id</td>
                       <td>$name</td>
                       <td>
-                        <button class='btn btn-sm btn-success' onclick='addToCart($id)'>add to cart</button>
                         
+                        <button class='btn btn-sm btn-success' onclick='addToCart(\"product\" + $id, $id, 10)'>add to cart</button>
                       </td>
                     </tr>
                   ";
@@ -104,24 +114,33 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script>
+    window.onload = function() {
+      let count = Number($('#numProdOfCart').text());
+      if(count <= 0) {
+        $('#numProdOfCart').hide();
+      } else {
+        $('#numProdOfCart').show();
+      }
+    }
+    
+    
     function setCookie(cname, cvalue, exdays) {
       var d = new Date();
       d.setTime(d.getTime() + (exdays*24*60*60*1000));
       var expires = "expires="+ d.toUTCString();
       document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
     }
-    $count = 0;
-    $('#numProdOfCart').text($count);
-    $('#numProdOfCart').hide();
     
-    function addToCart(id) {
-      $count++;
-      $('#numProdOfCart').text($count);
+
+
+    function addToCart(cname, cvalue, exdays) {
+      setCookie(cname, cvalue, exdays);
+      let countProd = Number($('#numProdOfCart').text());
+      countProd++;
       $('#numProdOfCart').show();
-      setCookie(`product${id}`, id, 1);
+      $('#numProdOfCart').text(countProd);
       console.log(document.cookie);
     }
-
     
     </script>
   </body>

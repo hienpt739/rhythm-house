@@ -1,0 +1,46 @@
+/* nav */
+  /* cart link */
+  #cartLink {
+    position: relative;
+  }
+  #cartLink span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: red;
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    border-radius: 20%;
+    top: -8px;
+    right: -8px;
+    color: white;
+  }
+  
+  /* mr for login and user icon */
+  .mr-10 {
+    margin-right: 130px !important;
+  }
+
+/* section1 - link to albums or live shows*/
+#section1 {
+  background: url("images/backgroundimage.jpg") no-repeat center;
+  background-size: cover;
+  /* height: 500px; */
+}
+#section1-subContainer {
+  height: 400px;
+}
+
+/* #section1-subContainer:first-child h1{
+  color: rgb(230, 53, 9);
+} */
+
+/* section 3: live show */
+#section3 {
+  background: url("images/anh13.jpg") no-repeat center;
+}
+#section3-subContainer {
+  height: 400px;
+}
